@@ -1,0 +1,18 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.29
+4 verbose config Skipping project config: /home/ggrn/.npmrc. (matches userconfig)
+5 error install Couldn't read dependencies
+6 error package.json ENOENT, open '/home/ggrn/package.json'
+6 error package.json This is most likely not a problem with npm itself.
+6 error package.json npm can't find a package.json file in your current directory.
+7 error System Linux 3.16.0-4-amd64
+8 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+9 error cwd /home/ggrn/.vim/bundle
+10 error node -v v0.10.29
+11 error npm -v 1.4.21
+12 error path /home/ggrn/package.json
+13 error code ENOPACKAGEJSON
+14 error errno 34
+15 verbose exit [ 34, true ]
