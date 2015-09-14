@@ -55,6 +55,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 
 
+
 " AirLine
 set laststatus=2
 
@@ -78,17 +79,17 @@ let g:lightline = {
 "GitGutter
 let g:gitgutter_avoid_cmd_prompt_on_windows = 0 
 
-"BuffExplorer
+"BuffExplorer toggle
 nmap <C-F5> <Esc>:BufExplorer<cr>
 vmap <C-F5> <esc>:BufExplorer<cr>
 imap <C-F5> <esc>:BufExplorer<cr>
 
-" F6 - предыдущий буфер
+" F6 - prev buffer
 nmap <C-F6> :bp<cr>
 vmap <C-F6> <esc>:bp<cr>i
 imap <C-F6> <esc>:bp<cr>i
 
-" F7 - следующий буфер
+" F7 - next buffer
 nmap <C-F7> :bn<cr>
 vmap <C-F7> <esc>:bn<cr>i
 imap <C-F7> <esc>:bn<cr>i
