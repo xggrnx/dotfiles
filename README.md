@@ -9,13 +9,14 @@ vim plugins:
 - [powerline fonts](https://github.com/powerline/fonts)
 - [GitGutter](https://github.com/airblade/vim-gitgutter)
 - [jsBeautify](https://github.com/maksimr/vim-jsbeautify)
+- [jsHint](https://github.com/Shutnik/jshint2.vim)
 
 
 ```
 git clone https://github.com/ggrn/dotfiles.git
 
-ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/vim ~/.vim
-ln -s ~/dotfiles/zshrc ~/.zshrc
-cp ~/dotfiles/ini ~/.config/mc/ini
+ln -s ~/src/dotfiles/vimrc ~/.vimrc
+ln -s ~/src/dotfiles/vim ~/.vim
+ln -s ~/src/dotfiles/zshrc ~/.zshrc
+cp ~/src/dotfiles/ini ~/.config/mc/ini
 ```
