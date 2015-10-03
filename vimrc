@@ -107,7 +107,7 @@ imap <C-F7> <esc>:bn<cr>i
 
 "PyMode
 let g:pymode_virtualenv = 1
-
+let g:pymode_rope_goto_definition_bind = "<C-]>"
 
 "JavaScript
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
