@@ -9,7 +9,7 @@ vim plugins:
 - [powerline fonts](https://github.com/powerline/fonts)
 - [GitGutter](https://github.com/airblade/vim-gitgutter)
 - [jsBeautify](https://github.com/maksimr/vim-jsbeautify)
-
+- [python-mode](https://github.com/klen/python-mode)
 
 ```
 git clone https://github.com/ggrn/dotfiles.git
