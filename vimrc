@@ -100,11 +100,9 @@ vmap <F6> <esc>:bp<cr>i
 imap <F6> <esc>:bp<cr>i
 
 " F7 - next buffer
-<<<<<<< HEAD
 nmap <F7> :bn<cr>
 vmap <F7> <esc>:bn<cr>i
 imap <F7> <esc>:bn<cr>i
-=======
 nmap <C-F7> :bn<cr>
 vmap <C-F7> <esc>:bn<cr>i
 imap <C-F7> <esc>:bn<cr>i
