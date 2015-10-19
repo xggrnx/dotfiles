@@ -12,6 +12,7 @@ vim plugins:
 - [GitGutter](https://github.com/airblade/vim-gitgutter)
 - [jsBeautify](https://github.com/maksimr/vim-jsbeautify)
 - [jsHint](https://github.com/Shutnik/jshint2.vim)
+- [python-mode](https://github.com/klen/python-mode)
 
 ```
 git clone https://github.com/ggrn/dotfiles.git
