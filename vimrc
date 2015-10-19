@@ -90,24 +90,19 @@ let g:lightline = {
 let g:gitgutter_avoid_cmd_prompt_on_windows = 0 
 
 "BuffExplorer toggle
-nmap <C-F5> <Esc>:BufExplorer<cr>
-vmap <C-F5> <esc>:BufExplorer<cr>
-imap <C-F5> <esc>:BufExplorer<cr>
+nmap <F5> <Esc>:BufExplorer<cr>
+vmap <F5> <esc>:BufExplorer<cr>
+imap <F5> <esc>:BufExplorer<cr>
 
 " F6 - prev buffer
-nmap <C-F6> :bp<cr>
-vmap <C-F6> <esc>:bp<cr>i
-imap <C-F6> <esc>:bp<cr>i
+nmap <F6> :bp<cr>
+vmap <F6> <esc>:bp<cr>i
+imap <F6> <esc>:bp<cr>i
 
 " F7 - next buffer
-nmap <C-F7> :bn<cr>
-vmap <C-F7> <esc>:bn<cr>i
-imap <C-F7> <esc>:bn<cr>i
-
-
-"PyMode
-let g:pymode_virtualenv = 1
-
+nmap <F7> :bn<cr>
+vmap <F7> <esc>:bn<cr>i
+imap <F7> <esc>:bn<cr>i
 
 "JavaScript
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
