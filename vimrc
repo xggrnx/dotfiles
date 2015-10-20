@@ -3,7 +3,9 @@ set nu
 set backupdir=~/.vim/backup " Directories for backup files
 
 hi  NonText ctermfg=black guifg=black
-colorscheme   molokai
+set background=light
+colorscheme  solarized
+let g:solarized_termcolors=256
 set termencoding=utf-8
 set encoding=utf-8          " use utf-8 by default
 set history=10000           " Number of things to remember in history.
@@ -13,6 +15,7 @@ set shiftwidth=4
 set expandtab
 set matchtime=5   
 set modeline
+
 syntax on
 
 
