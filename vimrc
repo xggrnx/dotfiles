@@ -2,10 +2,8 @@
 set nu
 set backupdir=~/.vim/backup " Directories for backup files
 
-hi  NonText ctermfg=black guifg=black
 set background=light
-colorscheme  solarized
-let g:solarized_termcolors=256
+colorscheme hybrid
 set termencoding=utf-8
 set encoding=utf-8          " use utf-8 by default
 set history=10000           " Number of things to remember in history.
@@ -74,6 +72,7 @@ set laststatus=2
 
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_powerline_fonts = 1
 let g:lightline = {
