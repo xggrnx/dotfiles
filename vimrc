@@ -109,6 +109,8 @@ nmap <C-F7> :bn<cr>
 vmap <C-F7> <esc>:bn<cr>i
 imap <C-F7> <esc>:bn<cr>i
 
+" TagBar
+nmap <F8> :TagbarToggle<CR>
 
 "JavaScript
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -130,7 +132,7 @@ autocmd User Node
 let jshint2_read = 1
 let jshint2_save = 1
 let jshint2_confirm = 0
-let jshint2_min_height = 3
+let jshint2_min_height =6 
 let jshint2_max_height = 12
 " jshint validation
 nnoremap <silent><F1> :JSHint<CR>
@@ -145,3 +147,8 @@ vnoremap <silent><F2> :lnext<CR>
 nnoremap <silent><F3> :lprevious<CR>
 inoremap <silent><F3> <C-O>:lprevious<CR>
 vnoremap <silent><F3> :lprevious<CR>
+
+"JsCtags
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/local/bin/jsctags'
+    \ }
