@@ -1,6 +1,10 @@
 # dotfiles
 Default zsh(oh-my-zsh) and mc config, 
 
+Npm modules:
+- [jsctags] (https://github.com/ramitos/jsctags)
+- [supervisor] (https://github.com/petruisfan/node-supervisor)
+- [tern] (
 vim plugins:
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
@@ -12,6 +16,8 @@ vim plugins:
 - [GitGutter](https://github.com/airblade/vim-gitgutter)
 - [jsBeautify](https://github.com/maksimr/vim-jsbeautify)
 - [jsHint](https://github.com/Shutnik/jshint2.vim)
+- [TagBar](https://github.com/majutsushi/tagbar)
+- [tern_for_vim] (https://github.com/marijnh/tern_for_vim)
 
 ```
 git clone https://github.com/ggrn/dotfiles.git

@@ -2,8 +2,8 @@
 set nu
 set backupdir=~/.vim/backup " Directories for backup files
 
-hi  NonText ctermfg=black guifg=black
-colorscheme   molokai
+set background=light
+colorscheme hybrid
 set termencoding=utf-8
 set encoding=utf-8          " use utf-8 by default
 set history=10000           " Number of things to remember in history.
@@ -13,6 +13,7 @@ set shiftwidth=4
 set expandtab
 set matchtime=5   
 set modeline
+
 syntax on
 
 
@@ -71,10 +72,11 @@ set laststatus=2
 
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_powerline_fonts = 1
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'papercolor',
       \ }
 
 let g:lightline = {
@@ -104,6 +106,8 @@ nmap <F7> :bn<cr>
 vmap <F7> <esc>:bn<cr>i
 imap <F7> <esc>:bn<cr>i
 
+" TagBar
+nmap <F8> :TagbarToggle<CR>
 
 "JavaScript
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -125,7 +129,7 @@ autocmd User Node
 let jshint2_read = 1
 let jshint2_save = 1
 let jshint2_confirm = 0
-let jshint2_min_height = 3
+let jshint2_min_height =6 
 let jshint2_max_height = 12
 " jshint validation
 nnoremap <silent><F1> :JSHint<CR>
@@ -140,3 +144,8 @@ vnoremap <silent><F2> :lnext<CR>
 nnoremap <silent><F3> :lprevious<CR>
 inoremap <silent><F3> <C-O>:lprevious<CR>
 vnoremap <silent><F3> :lprevious<CR>
+
+"JsCtags
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/local/bin/jsctags'
+    \ }
