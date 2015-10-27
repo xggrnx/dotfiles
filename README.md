@@ -5,6 +5,7 @@ Npm modules:
 - [jsctags] (https://github.com/ramitos/jsctags)
 - [supervisor] (https://github.com/petruisfan/node-supervisor)
 - [tern] (https://github.com/marijnh/tern)
+
 vim plugins:
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
