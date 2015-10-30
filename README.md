@@ -21,7 +21,7 @@ vim plugins:
 - [tern_for_vim] (https://github.com/marijnh/tern_for_vim)
 
 ```
-git clone https://github.com/ggrn/dotfiles.git
+git clone https://github.com/xggrnx/dotfiles.git
 
 ln -s ~/src/dotfiles/vimrc ~/.vimrc
 ln -s ~/src/dotfiles/vim ~/.vim
