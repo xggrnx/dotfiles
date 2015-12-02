@@ -19,6 +19,7 @@ vim plugins:
 - [jsHint](https://github.com/Shutnik/jshint2.vim)
 - [TagBar](https://github.com/majutsushi/tagbar)
 - [tern_for_vim] (https://github.com/marijnh/tern_for_vim)
+- [python mode] (https://github.com/klen/python-mode)
 
 ```
 git clone https://github.com/xggrnx/dotfiles.git
