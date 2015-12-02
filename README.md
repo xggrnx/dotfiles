@@ -7,7 +7,7 @@ Npm modules:
 - [tern] (https://github.com/marijnh/tern)
 
 vim plugins:
-- [vim-pathogen](https://github.com/tpope/vim-pathogen)
+- [vundle](https://github.com/VundleVim/Vundle.vim)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
