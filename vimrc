@@ -1,9 +1,9 @@
 " Default
 set nu
 set backupdir=~/.vim/backup " Directories for backup files
-
-set background=light
-colorscheme hybrid
+set noswapfile
+"set background=light
+colorscheme atom
 set termencoding=utf-8
 set encoding=utf-8          " use utf-8 by default
 set history=10000           " Number of things to remember in history.
@@ -18,7 +18,7 @@ syntax on
 
 
 " Pathogen load
-hi nontext ctermfg=bg guifg=bg cterm=NONE gui=NONE 
+"hi nontext ctermfg=bg guifg=bg cterm=NONE gui=NONE 
 filetype off
 
 call pathogen#infect()
