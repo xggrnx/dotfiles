@@ -2,8 +2,8 @@
 set nu
 set backupdir=~/.vim/backup " Directories for backup files
 
-set background=light
-colorscheme hybrid
+set background=dark
+colorscheme molokai
 set termencoding=utf-8
 set encoding=utf-8          " use utf-8 by default
 set history=10000           " Number of things to remember in history.
@@ -16,14 +16,32 @@ set modeline
 
 syntax on
 
-
-" Pathogen load
 hi nontext ctermfg=bg guifg=bg cterm=NONE gui=NONE 
+" Vundle Load
+set nocompatible
 filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-call pathogen#infect()
-call pathogen#helptags()
+" Core Plugins
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Shougo/neocomplete'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ternjs/tern_for_vim'
 
+" Go Lang
+Plugin 'fatih/vim-go'
+
+" JavaScript
+Plugin 'einars/js-beautify'
+
+call vundle#end()
 filetype plugin indent on
 syntax on
 
@@ -90,6 +108,7 @@ let g:lightline = {
 
 "GitGutter
 let g:gitgutter_avoid_cmd_prompt_on_windows = 0 
+let g:gitgutter_max_signs = 1500
 
 "BuffExplorer toggle
 nmap <F5> <Esc>:BufExplorer<cr>
@@ -126,11 +145,16 @@ autocmd User Node
   \ endif
 
 "JSHINT2
+
 let jshint2_read = 1
 let jshint2_save = 1
 let jshint2_confirm = 0
 let jshint2_min_height =6 
 let jshint2_max_height = 12
+
+
+
+set runtimepath+=~/.vim/bundle/jshint2.vim/
 " jshint validation
 nnoremap <silent><F1> :JSHint<CR>
 inoremap <silent><F1> <C-O>:JSHint<CR>
