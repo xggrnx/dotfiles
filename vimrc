@@ -3,7 +3,6 @@ set nu
 set backupdir=~/.vim/backup " Directories for backup files
 
 set background=dark
-colorscheme molokai
 set termencoding=utf-8
 set encoding=utf-8          " use utf-8 by default
 set history=10000           " Number of things to remember in history.
@@ -16,7 +15,6 @@ set modeline
 
 syntax on
 
-hi nontext ctermfg=bg guifg=bg cterm=NONE gui=NONE 
 " Vundle Load
 set nocompatible
 filetype off
@@ -29,6 +27,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Shougo/neocomplete'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'bling/vim-airline'
@@ -40,6 +39,9 @@ Plugin 'fatih/vim-go'
 
 " JavaScript
 Plugin 'einars/js-beautify'
+
+" Python 
+Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin indent on
