@@ -7,7 +7,7 @@ Npm modules:
 - [tern] (https://github.com/marijnh/tern)
 
 vim plugins:
-- [vim-pathogen](https://github.com/tpope/vim-pathogen)
+- [vundle](https://github.com/VundleVim/Vundle.vim)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
@@ -19,6 +19,7 @@ vim plugins:
 - [jsHint](https://github.com/Shutnik/jshint2.vim)
 - [TagBar](https://github.com/majutsushi/tagbar)
 - [tern_for_vim] (https://github.com/marijnh/tern_for_vim)
+- [python mode] (https://github.com/klen/python-mode)
 
 ```
 git clone https://github.com/xggrnx/dotfiles.git
