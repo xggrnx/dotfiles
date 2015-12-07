@@ -46,6 +46,13 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
+
+
+"PyMode 
+let g:pymode_virtualenv = 1
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+
 "NeoComplete
 let g:neocomplete#enable_at_startup = 1
 
@@ -83,7 +90,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
-
 
 
 " AirLine
