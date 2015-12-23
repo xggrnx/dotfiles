@@ -37,7 +37,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'fatih/vim-go'
 
 " JavaScript
-Plugin 'einars/js-beautify'
+Plugin 'maksimr/vim-jsbeautify'
 
 " Python 
 Plugin 'klen/python-mode'
