@@ -22,6 +22,8 @@ call vundle#begin()
 
 " Core Plugins
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
@@ -37,7 +39,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'fatih/vim-go'
 
 " JavaScript
-Plugin 'einars/js-beautify'
+Plugin 'maksimr/vim-jsbeautify'
 
 " Python 
 Plugin 'klen/python-mode'
@@ -46,12 +48,13 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
+" PyMode
+let g:pymode_rope_goto_definition_bind = "<C-]>"
+let pymode = 1
+let pymode_doc = 1
+let pymode_lint_checkers = ['pyflakes', 'pep8']
 
 
-"PyMode 
-let g:pymode_virtualenv = 1
-let g:pymode_run = 1
-let g:pymode_run_bind = '<leader>r'
 
 "NeoComplete
 let g:neocomplete#enable_at_startup = 1
