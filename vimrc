@@ -14,6 +14,9 @@ set expandtab
 set matchtime=5   
 set modeline
 syntax on
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
+
 " Vundle Load
 set nocompatible
 filetype off
