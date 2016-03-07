@@ -19,3 +19,8 @@ ln -s ~/src/dotfiles/vim ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
+git clone https://github.com/powerline/fonts.git
+cd ~/src/fonts
+sh install.sh
+
+
