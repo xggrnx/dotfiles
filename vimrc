@@ -2,7 +2,6 @@
 set nu
 set backupdir=~/.vim/backup " Directories for backup files
 set noswapfile
-colorscheme atom
 set background=dark
 set termencoding=utf-8
 set encoding=utf-8          " use utf-8 by default
