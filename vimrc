@@ -43,6 +43,8 @@ Plugin 'fatih/vim-go'
 
 " JavaScript
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'pangloss/vim-javascript'
+
 
 " Python 
 Plugin 'klen/python-mode'
