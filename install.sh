@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install mc zsh git mercurial python-dev python-setuptools python-virtualenv python3-virtualenv python3-dev python3-setuptools
+sudo apt-get install mc zsh git mercurial python-dev python-setuptools python-virtualenv python3-virtualenv python3-dev python3-setuptools npm nodejs nodejs-legacy 
 
 #oh-my-zsh <3 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
