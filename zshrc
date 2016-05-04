@@ -45,7 +45,12 @@ ZSH_THEME="norm"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv python pylint go golan pip postgres mercurial django redis-cli)
+
+# For virtualenvwrapper plugin
+export WORKON_HOME="~/.virtualenvs"
+
+
+plugins=(git virtualenv virtualenvwrapper python pylint go golan pip postgres mercurial django redis-cli)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,3 +85,4 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # alias ohmyzsh="mate ~/.oh-my-zsh
 
 export TERM='xterm-256color'
+export APP_STATUS=1
