@@ -22,7 +22,7 @@ vim plugins:
 - [python mode] (https://github.com/klen/python-mode)
 
 ```
-git clone https://github.com/xggrnx/dotfiles.git
+git clone https://gitlab.com/gagarinska/dotfiles.git
 
 ln -s ~/src/dotfiles/vimrc ~/.vimrc
 ln -s ~/src/dotfiles/vim ~/.vim
