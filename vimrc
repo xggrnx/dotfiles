@@ -46,7 +46,6 @@ Plugin 'pangloss/vim-javascript'
 
 
 " Python 
-Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin indent on
