@@ -6,7 +6,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="norm"
+#ZSH_THEME="norm"
+#
+ZSH_THEME="pocahontas"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -86,3 +88,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 
 export TERM='xterm-256color'
 export APP_STATUS=1
+
+if [ -f ~/.zshalias ]; then
+    source ~/.zshalias
+else
+    print "404: ~/zshalias not found."
+fi
