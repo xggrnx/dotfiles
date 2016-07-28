@@ -52,7 +52,7 @@ ZSH_THEME="pocahontas"
 export WORKON_HOME="~/.virtualenvs"
 
 
-plugins=(git virtualenv virtualenvwrapper python pylint go golan pip postgres mercurial django redis-cli)
+plugins=(git python pylint go golan pip postgres mercurial django redis-cli)
 
 source $ZSH/oh-my-zsh.sh
 
