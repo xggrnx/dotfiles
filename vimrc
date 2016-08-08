@@ -85,7 +85,7 @@ endif
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '\.gem$',  '\.rbc$', '\~$']
+let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '\.egg-info$', '^\.git$', '\.gem$',  '\.rbc$', '\~$']
 let NERDTreeShowBookmarks=1       " Show the bookmarks table on startup
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
