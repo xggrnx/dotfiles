@@ -2,6 +2,7 @@
 
 #Core packages
 sudo apt-get install mc zsh git mercurial vim exuberant-ctags curl wget libcurl4-openssl-dev
+
 #Python Dev Modules
 sudo apt-get install python-dev python-setuptools python-virtualenv python3-virtualenv python3-dev python3-setuptools 
 
@@ -14,6 +15,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 exit
 #Packages for psycopg2 in virtualenv
 sudo apt-get install libpq-dev python-dev
+
+#Packages for lxml
+sudo apt-get install libxml2-dev libxslt-dev
 
 #Packages for Pillow in virtualenv
 sudo apt-get install libjpeg8 libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev
