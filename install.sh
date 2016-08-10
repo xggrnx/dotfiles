@@ -10,7 +10,8 @@ sudo apt-get install npm nodejs nodejs-legacy
 
 #oh-my-zsh <3 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
+#Exit from zsh after install
+exit
 #Packages for psycopg2 in virtualenv
 sudo apt-get install libpq-dev python-dev
 
