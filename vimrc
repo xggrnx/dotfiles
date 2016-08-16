@@ -45,17 +45,20 @@ Plugin 'pangloss/vim-javascript'
 
 
 " Python 
-
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
 
-" PyMode
-let g:pymode_rope_goto_definition_bind = "<C-]>"
-let pymode = 1
-let pymode_doc = 1
-let pymode_lint_checkers = ['pyflakes', 'pep8']
+"Python
 
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<C-]>"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
 
 
 "NeoComplete
