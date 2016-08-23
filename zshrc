@@ -91,3 +91,8 @@ if [ -f ~/.zshalias ]; then
 else
     print "404: ~/.zshalias not found."
 fi
+
+#gvm 
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+CGO_ENABLED=0 
