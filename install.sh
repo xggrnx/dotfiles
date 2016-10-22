@@ -9,10 +9,7 @@ sudo apt-get install python-dev python-setuptools python-virtualenv python3-virt
 #Node
 sudo apt-get install npm nodejs nodejs-legacy 
 
-#oh-my-zsh <3 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#Exit from zsh after install
-exit
+
 #Packages for psycopg2 in virtualenv
 sudo apt-get install libpq-dev python-dev
 
@@ -40,3 +37,8 @@ git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-
 # find ~/.fonts/ -iname '*.ttf' -exec echo \{\} \;
 fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 echo "finished installing"
+
+#oh-my-zsh <3 
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#Exit from zsh after install
+exit
