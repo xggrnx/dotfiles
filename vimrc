@@ -35,6 +35,8 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'mitsuhiko/vim-jinja'
+
 
 " Go Lang
 Plugin 'fatih/vim-go'
