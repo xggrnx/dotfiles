@@ -48,6 +48,9 @@ Plugin 'pangloss/vim-javascript'
 
 " Python 
 Plugin 'davidhalter/jedi-vim'
+Plugin 'lambdalisue/vim-pyenv' 
+
+
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -61,6 +64,18 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
+
+if jedi#init_python()
+  function! s:jedi_auto_force_py_version() abort
+    let major_version = pyenv#python#get_internal_major_version()
+    call jedi#force_py_version(major_version)
+  endfunction
+augroup vim-pyenv-custom-augroup
+   autocmd! *
+   autocmd User vim-pyenv-activate-post   call s:jedi_auto_force_py_version()
+   autocmd User vim-pyenv-deactivate-post call s:jedi_auto_force_py_version()
+augroup END
+endif
 
 
 "NeoComplete

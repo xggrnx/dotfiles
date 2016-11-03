@@ -38,6 +38,9 @@ git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-
 fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
 echo "finished installing"
 
+#pyEnv
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
 #oh-my-zsh <3 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #Exit from zsh after install

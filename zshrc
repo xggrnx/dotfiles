@@ -96,3 +96,9 @@ fi
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 CGO_ENABLED=0 
+
+#pyEnv
+export PATH="/home/xggrnx/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
