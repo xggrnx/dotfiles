@@ -45,11 +45,7 @@ ZSH_THEME="pocahontas"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# For virtualenvwrapper plugin
-export WORKON_HOME="~/.virtualenvs"
-
-
-plugins=(git python pylint go golan pip postgres mercurial django redis-cli)
+plugins=(git python pylint go golan pip postgres mercurial django redis-cli pyenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +95,7 @@ CGO_ENABLED=0
 
 #pyEnv
 export PATH="/home/xggrnx/.pyenv/bin:$PATH"
+#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
