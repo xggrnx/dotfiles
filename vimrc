@@ -36,7 +36,7 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'mitsuhiko/vim-jinja'
-
+Plugin 'Yggdroot/indentLine'
 
 " Go Lang
 Plugin 'fatih/vim-go'
@@ -45,6 +45,9 @@ Plugin 'fatih/vim-go'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'pangloss/vim-javascript'
 
+" TypeScript
+Plugin 'Quramy/tsuquyomi'
+Plugin 'leafgarland/typescript-vim'
 
 " Python 
 Plugin 'davidhalter/jedi-vim'
@@ -54,6 +57,12 @@ Plugin 'lambdalisue/vim-pyenv'
 call vundle#end()
 filetype plugin indent on
 syntax on
+
+
+"TypeScript
+let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
 
 "Python
 "omnifunc=jedi#completions
@@ -86,6 +95,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" IdentLine
+let g:indentLine_color_term = 239
+let g:indentLine_char = '┆'
 
 
 
