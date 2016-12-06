@@ -37,7 +37,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'Yggdroot/indentLine'
-
+Plugin 'scrooloose/nerdcommenter'
 " Go Lang
 Plugin 'fatih/vim-go'
 
