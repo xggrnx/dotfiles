@@ -38,6 +38,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'scrooloose/nerdcommenter'
 
 
 " Go Lang
