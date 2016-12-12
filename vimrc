@@ -227,3 +227,6 @@ vnoremap <silent><F3> :lprevious<CR>
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/local/bin/jsctags'
     \ }
+
+" GitBlame
+map <F12> :Gblame<CR>
