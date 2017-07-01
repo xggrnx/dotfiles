@@ -30,7 +30,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Shougo/neocomplete'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
@@ -48,60 +47,14 @@ Plugin 'fatih/vim-go'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'pangloss/vim-javascript'
 
-" TypeScript
-Plugin 'Quramy/tsuquyomi'
-Plugin 'leafgarland/typescript-vim'
-
-" Python 
-Plugin 'davidhalter/jedi-vim'
-Plugin 'lambdalisue/vim-pyenv' 
-
 
 call vundle#end()
 filetype plugin indent on
 syntax on
 
-
-"TypeScript
-let g:typescript_indent_disable = 1
-let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = ''
-
-"Python
-"omnifunc=jedi#completions
-let g:jedi#goto_command = "<leader>d"
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<C-]>"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#rename_command = "<leader>r"
-
-if jedi#init_python()
-  function! s:jedi_auto_force_py_version() abort
-    let major_version = pyenv#python#get_internal_major_version()
-    call jedi#force_py_version(major_version)
-  endfunction
-augroup vim-pyenv-custom-augroup
-   autocmd! *
-   autocmd User vim-pyenv-activate-post   call s:jedi_auto_force_py_version()
-   autocmd User vim-pyenv-deactivate-post call s:jedi_auto_force_py_version()
-augroup END
-endif
-
-
-"NeoComplete
-let g:neocomplete#enable_at_startup = 1
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
 " IdentLine
 let g:indentLine_color_term = 239
 let g:indentLine_char = '┆'
-
 
 
 " Plugin key-mappings.
@@ -115,8 +68,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
    set conceallevel=2 concealcursor=niv
 endif
-
-
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -184,11 +135,8 @@ nmap <F8> :TagbarToggle<CR>
 
 "JavaScript
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
 autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
 
 
@@ -199,14 +147,11 @@ autocmd User Node
   \ endif
 
 "JSHINT2
-
 let jshint2_read = 1
 let jshint2_save = 1
 let jshint2_confirm = 0
 let jshint2_min_height =6 
 let jshint2_max_height = 12
-
-
 
 set runtimepath+=~/.vim/bundle/jshint2.vim/
 " jshint validation

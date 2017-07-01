@@ -5,7 +5,10 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pocahontas"
+#ZSH_THEME="refined"
+ZSH_THEME="cloud"
+#ZSH_THEME="pocahot"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -45,7 +48,7 @@ ZSH_THEME="pocahontas"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git python pylint go golan pip postgres mercurial django redis-cli pyenv)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,6 +82,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
 
+export PATH=$PATH:/usr/local/go/bin
 export TERM='xterm-256color'
 export APP_STATUS=1
 
@@ -88,18 +92,17 @@ else
     print "404: ~/.zshalias not found."
 fi
 
-#gvm 
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
-CGO_ENABLED=0 
 
 #pyEnv
-export PATH="/home/xggrnx/.pyenv/bin:$PATH"
+#export PATH="/home/xggrnx/.pyenv/bin:$PATH"
 #export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
-export JAVA_TOOL_OPTIONS="-javaagent:/usr/share/java/jayatanaag.jar $JAVA_TOOL_OPTIONS"
+export WORKON_HOME="~/.pyenv/versions/"
+source /usr/local/bin/virtualenvwrapper.sh
 
 alias ta="tmux attach"
-alias pull_all="./src/dotfiles/bin/pull_all.sh"
+
+
+#Scritps
+alias pull_all="~/src/dotfiles/bin/pull_all.sh"
+
