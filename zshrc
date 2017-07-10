@@ -106,3 +106,5 @@ alias ta="tmux attach"
 #Scritps
 alias pull_all="~/src/dotfiles/bin/pull_all.sh"
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
