@@ -175,3 +175,9 @@ let g:tagbar_type_javascript = {
 
 " GitBlame
 map <F12> :Gblame<CR>
+
+set tags=./tags,./TAGS,tags;~,TAGS;~
+
+let g:pymode_python = 'python3'
+
+
