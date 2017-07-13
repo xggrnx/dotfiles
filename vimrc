@@ -1,5 +1,5 @@
-" Default
 set nu
+set nowrap
 set backupdir=~/.vim/backup " Directories for backup files
 set noswapfile
 set background=dark
@@ -12,19 +12,25 @@ set shiftwidth=4
 set expandtab
 set matchtime=5   
 set modeline
+set clipboard=unnamed   "Copy to system clipboard
 syntax on
+
+"Tmux and vim
+set clipboard=unnamed
+
+
+" if u forgot about sudo 
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
+"Vundle Start
 " Vundle Load
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Core Plugins
+"Core Plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
@@ -33,24 +39,67 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'mitsuhiko/vim-jinja'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
 
+"CTAGS
+Plugin 'universal-ctags/ctags'
 
-" Go Lang
-Plugin 'fatih/vim-go'
+"autogenerate
+Plugin 'craigemery/vim-autotag'
 
-" JavaScript
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'pangloss/vim-javascript'
+
+"Syntax checking
+Plugin 'scrooloose/syntastic'
+
+"Python
+Plugin 'python-mode/python-mode'
+
+"Completition
+Plugin 'Shougo/neocomplete.vim'
+
+"Python virtualenv
+Plugin 'jmcantrell/vim-virtualenv' 
+
+"emmet
+Plugin 'mattn/emmet-vim'
+
+"jinja2
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 
 call vundle#end()
 filetype plugin indent on
 syntax on
+
+"CTAGS
+set tags=./tags,tags;$HOME
+
+
+"Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+
+
+"PyMode
+let g:pymode_python = 'python3'
+let g:pymode_rope_goto_definition_bind = "<C-]>"
+let g:pymode_doc_bind = "<C-S-d>"
+
+"https://github.com/python-mode/python-mode/issues/384
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+"NeoComplete
+let g:neocomplete#enable_at_startup = 1
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 
 " IdentLine
 let g:indentLine_color_term = 239
@@ -132,46 +181,6 @@ imap <F7> <esc>:bn<cr>i
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
-
-"JavaScript
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
-
-
-autocmd User Node
-  \ if &filetype == "javascript" |
-  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
-  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
-  \ endif
-
-"JSHINT2
-let jshint2_read = 1
-let jshint2_save = 1
-let jshint2_confirm = 0
-let jshint2_min_height =6 
-let jshint2_max_height = 12
-
-set runtimepath+=~/.vim/bundle/jshint2.vim/
-" jshint validation
-nnoremap <silent><F1> :JSHint<CR>
-inoremap <silent><F1> <C-O>:JSHint<CR>
-vnoremap <silent><F1> :JSHint<CR>
-
-" show next jshint error
-nnoremap <silent><F2> :lnext<CR>
-inoremap <silent><F2> <C-O>:lnext<CR>
-vnoremap <silent><F2> :lnext<CR>
-" show previous jshint error
-nnoremap <silent><F3> :lprevious<CR>
-inoremap <silent><F3> <C-O>:lprevious<CR>
-vnoremap <silent><F3> :lprevious<CR>
-
-"JsCtags
-let g:tagbar_type_javascript = {
-    \ 'ctagsbin' : '/usr/local/bin/jsctags'
-    \ }
 
 " GitBlame
 map <F12> :Gblame<CR>
