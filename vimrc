@@ -184,3 +184,9 @@ nmap <F8> :TagbarToggle<CR>
 
 " GitBlame
 map <F12> :Gblame<CR>
+
+set tags=./tags,./TAGS,tags;~,TAGS;~
+
+let g:pymode_python = 'python3'
+
+
