@@ -6,8 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="refined"
-ZSH_THEME="cloud"
-#ZSH_THEME="pocahot"
+#ZSH_THEME="agnoster"
+ZSH_THEME="pocahontas"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -97,15 +97,18 @@ fi
 #export PATH="/home/xggrnx/.pyenv/bin:$PATH"
 #export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/opt/python3/bin/python3
+export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 export WORKON_HOME="~/.pyenv/versions/"
-source /usr/local/bin/virtualenvwrapper.sh
+source /home/xggrnx/.local/bin/virtualenvwrapper.sh
 
 alias ta="tmux attach"
 
 
 #Scritps
 alias pull_all="~/src/dotfiles/bin/pull_all.sh"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
