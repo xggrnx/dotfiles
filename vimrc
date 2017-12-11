@@ -42,6 +42,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'wincent/command-t'
 
 "CTAGS
 Plugin 'universal-ctags/ctags'
@@ -75,7 +76,7 @@ syntax on
 
 "CTAGS
 set tags=./tags,tags;$HOME
-
+set tags=./tags,./TAGS,tags;~,TAGS;~;$HOME
 
 "Emmet
 let g:user_emmet_install_global = 0
@@ -185,8 +186,6 @@ nmap <F8> :TagbarToggle<CR>
 " GitBlame
 map <F12> :Gblame<CR>
 
-set tags=./tags,./TAGS,tags;~,TAGS;~
 
-let g:pymode_python = 'python3'
 
 
