@@ -100,6 +100,8 @@ fi
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 export WORKON_HOME="~/.pyenv/versions/"
 source /home/xggrnx/.local/bin/virtualenvwrapper.sh
+PATH=$PATH:~/.local/bin
+
 
 alias ta="tmux attach"
 
@@ -112,3 +114,10 @@ alias pull_all="~/src/dotfiles/bin/pull_all.sh"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
