@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="refined"
 #ZSH_THEME="agnoster"
-ZSH_THEME="pocahontas"
+ZSH_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -94,12 +94,12 @@ fi
 
 
 #pyEnv
-#export PATH="/home/xggrnx/.pyenv/bin:$PATH"
+#export PATH="~/.pyenv/bin:$PATH"
 #export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
-export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
 export WORKON_HOME="~/.pyenv/versions/"
-source /home/xggrnx/.local/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh
 
 alias ta="tmux attach"
 
@@ -112,3 +112,5 @@ alias pull_all="~/src/dotfiles/bin/pull_all.sh"
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

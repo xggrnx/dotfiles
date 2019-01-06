@@ -13,6 +13,8 @@ set expandtab
 set matchtime=5   
 set modeline
 set clipboard=unnamed   "Copy to system clipboard
+"Backspace in osX
+set backspace=indent,eol,start
 syntax on
 
 "Tmux and vim
@@ -57,6 +59,7 @@ Plugin 'craigemery/vim-autotag'
 "Python
 Plugin 'python-mode/python-mode'
 
+
 "Completition
 Plugin 'Shougo/neocomplete.vim'
 
@@ -68,6 +71,9 @@ Plugin 'mattn/emmet-vim'
 
 "jinja2
 Plugin 'Glench/Vim-Jinja2-Syntax'
+
+"Js
+Plugin 'maksimr/vim-jsbeautify'
 
 
 call vundle#end()
@@ -86,7 +92,8 @@ autocmd FileType html,css EmmetInstall
 
 "PyMode
 let g:pymode_python = 'python3'
-let g:pymode_rope_goto_definition_bind = "<C-]>"
+"let g:pymode_rope_autoimport=0
+let g:pymode_rope_goto_definition_bind = "<C-b>"
 let g:pymode_doc_bind = "<C-S-d>"
 
 "https://github.com/python-mode/python-mode/issues/384
@@ -202,6 +209,26 @@ nmap <F8> :TagbarToggle<CR>
 " GitBlame
 map <F12> :Gblame<CR>
 
+
+"JsBeautify
+map <c-f> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" for jsx
+autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+"For visual mode
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
 
 
