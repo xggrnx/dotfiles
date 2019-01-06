@@ -1,0 +1,9 @@
+#!/bin/sh
+VAR=`grep -r --include '*.py' -F 'import ipdb'`
+echo $VAR
+if [ -z "$VAR" ]
+then
+    exit 0
+else
+    exit 1
+fi

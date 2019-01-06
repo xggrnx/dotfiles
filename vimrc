@@ -20,9 +20,16 @@ syntax on
 "Tmux and vim
 set clipboard=unnamed
 
-
 " if u forgot about sudo 
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
+"Window Navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
 
 "Vundle Start
 " Vundle Load
@@ -48,10 +55,11 @@ Plugin 'wincent/command-t'
 
 "CTAGS
 Plugin 'universal-ctags/ctags'
+Plugin 'ludovicchabant/vim-gutentags'
+
 
 "autogenerate
 Plugin 'craigemery/vim-autotag'
-
 
 "Syntax checking
 "Plugin 'scrooloose/syntastic'
@@ -65,6 +73,9 @@ Plugin 'Shougo/neocomplete.vim'
 
 "Python virtualenv
 Plugin 'jmcantrell/vim-virtualenv' 
+
+"CtrlP 
+Plugin 'ctrlpvim/ctrlp.vim'
 
 "emmet
 Plugin 'mattn/emmet-vim'
@@ -82,13 +93,12 @@ syntax on
 
 "CTAGS
 set tags=./tags,tags;$HOME
-set tags=./tags,./TAGS,tags;~,TAGS;~;$HOME
+
+
 
 "Emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
-
 
 "PyMode
 let g:pymode_python = 'python3'
@@ -100,9 +110,26 @@ let g:pymode_doc_bind = "<C-S-d>"
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+"Ctrl
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" `Very useful when you need to jump around a project in a hurry`
+nnoremap <leader>. :CtrlPTag<cr>
+" CtrlP+TagBar
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
 
 "NeoComplete
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 0
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -134,7 +161,7 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 " Nerdtree
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
@@ -164,6 +191,9 @@ let g:NERDTreeIndicatorMapCustom = {
 
 
 " AirLine
+
+set statusline+=%{gutentags#statusline()}
+
 set laststatus=2
 
 let g:airline#extensions#tabline#left_sep = ' '
@@ -229,6 +259,11 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+"VimDiff
+map <leader>1 :diffg LO<CR>
+map <leader>2 :diffg BA<CR>
+map <leader>3 :diffg RE<CR>
 
 
 
