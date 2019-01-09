@@ -102,8 +102,8 @@ autocmd FileType html,css EmmetInstall
 
 "PyMode
 let g:pymode_python = 'python3'
-"let g:pymode_rope_autoimport=0
-let g:pymode_rope_goto_definition_bind = "<C-b>"
+let g:pymode_rope_autoimport=1
+"let g:pymode_rope_goto_definition_bind = "<leader>g"
 let g:pymode_doc_bind = "<C-S-d>"
 
 "https://github.com/python-mode/python-mode/issues/384
@@ -138,7 +138,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " IdentLine
 let g:indentLine_color_term = 239
-let g:indentLine_char = '┆'
+let g:indentLine_char = '|'
 
 
 " Plugin key-mappings.

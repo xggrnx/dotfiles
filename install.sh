@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Core packages
-sudo apt-get install mc zsh git mercurial vim exuberant-ctags curl wget libcurl4-openssl-dev
+sudo apt-get install mc zsh git mercurial vim exuberant-ctags curl wget libcurl4-openssl-dev python3-pip
 
 #Python Dev Modules
 sudo apt-get install python-dev python-setuptools python-virtualenv python3-virtualenv python3-dev python3-setuptools
