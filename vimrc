@@ -103,6 +103,7 @@ autocmd FileType html,css EmmetInstall
 "PyMode
 let g:pymode_python = 'python3'
 let g:pymode_rope_autoimport=1
+let g:pymode_rope_lookup_project = 1 
 "let g:pymode_rope_goto_definition_bind = "<leader>g"
 let g:pymode_doc_bind = "<C-S-d>"
 
@@ -129,11 +130,17 @@ nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 
 "NeoComplete
-"let g:neocomplete#enable_at_startup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#enable_auto_select = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+set completeopt-=preview
+
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType python setlocal omnifunc=python3complete#Complete
 
 
 " IdentLine
@@ -260,10 +267,6 @@ autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
-"VimDiff
-map <leader>1 :diffg LO<CR>
-map <leader>2 :diffg BA<CR>
-map <leader>3 :diffg RE<CR>
 
 map <c-f> :call JsBeautify()<cr>
 " or
@@ -282,3 +285,9 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+"VimDiff
+map <leader>1 :diffg LO<CR>
+map <leader>2 :diffg BA<CR>
+map <leader>3 :diffg RE<CR>
+
