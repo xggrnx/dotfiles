@@ -92,6 +92,15 @@ else
     print "404: ~/.zshalias not found."
 fi
 
+if [ -f ~/.zshpath ]; then
+    source ~/.zshpath
+else
+    print "404: ~/.zshalias not found."
+fi
+
+
+
+PATH=$PATH:~/.local/bin
 
 #pyEnv
 #export PATH="~/.pyenv/bin:$PATH"

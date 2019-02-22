@@ -67,6 +67,7 @@ Plugin 'craigemery/vim-autotag'
 "Python
 Plugin 'python-mode/python-mode'
 
+"Rust
 
 "Completition
 Plugin 'Shougo/neocomplete.vim'
@@ -110,6 +111,10 @@ let g:pymode_doc_bind = "<C-S-d>"
 "https://github.com/python-mode/python-mode/issues/384
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+"Rust
+let g:rust_clip_command = 'xclip -selection clipboard'
+
 
 "Ctrl
 set runtimepath^=~/.vim/bundle/ctrlp.vim
