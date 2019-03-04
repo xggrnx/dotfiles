@@ -16,9 +16,18 @@ set clipboard=unnamed   "Copy to system clipboard
 "Backspace in osX
 set backspace=indent,eol,start
 syntax on
+colorscheme iceberg
 
-"Tmux and vim
+
+
+"Tmux and vim 
 set clipboard=unnamed
+
+"Clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
 " if u forgot about sudo 
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
@@ -47,6 +56,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ryanoasis/vim-devicons'
@@ -95,16 +105,19 @@ syntax on
 set tags=./tags,tags;$HOME
 
 
-
+au BufRead *.html set filetype=html
 "Emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 "PyMode
 let g:pymode_python = 'python3'
-let g:pymode_rope_autoimport=1
-let g:pymode_rope_lookup_project = 1 
+let g:pymode_rope = 1
+"let g:pymode_rope_autoimport=1
+"let g:pymode_rope_lookup_project = 1 
 "let g:pymode_rope_goto_definition_bind = "<leader>g"
+let g:pymode_rope_goto_definition_bind = "<C-]>"
+let g:pymode_rope_goto_definition_cmd = 'e'
 let g:pymode_doc_bind = "<C-S-d>"
 
 "https://github.com/python-mode/python-mode/issues/384
@@ -175,7 +188,7 @@ let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=0
 let NERDTreeMouseMode=2
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
+let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr','^__pycache__$']
 let NERDTreeKeepTreeInNewTab=1
 " Auto open nerd tree on startup
 let g:nerdtree_tabs_open_on_gui_startup = 1
@@ -208,12 +221,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_powerline_fonts = 1
+let g:airline_theme='iceberg'
 let g:lightline = {
-      \ 'colorscheme': 'papercolor',
-      \ }
-
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
       \ },
