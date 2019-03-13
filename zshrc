@@ -95,16 +95,12 @@ fi
 if [ -f ~/.zshpath ]; then
     source ~/.zshpath
 else
-    print "404: ~/.zshalias not found."
+    print "404: ~/.zshpath not found."
 fi
 
 
 
 PATH=$PATH:~/.local/bin
-
-#pyEnv
-#export PATH="~/.pyenv/bin:$PATH"
-#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
 export WORKON_HOME="~/.pyenv/versions/"
@@ -115,7 +111,6 @@ alias ta="tmux attach"
 
 #Scritps
 alias pull_all="~/src/dotfiles/bin/pull_all.sh"
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
