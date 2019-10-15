@@ -83,7 +83,9 @@ Plugin 'python-mode/python-mode'
 Plugin 'Shougo/neocomplete.vim'
 
 "Python virtualenv
-Plugin 'jmcantrell/vim-virtualenv' 
+Plugin 'plytophogy/vim-virtualenv'
+Plugin 'PieterjanMontens/vim-pipenv'
+
 
 "CtrlP 
 Plugin 'ctrlpvim/ctrlp.vim'
