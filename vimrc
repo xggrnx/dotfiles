@@ -115,7 +115,7 @@ autocmd FileType html,css EmmetInstall
 let g:pymode_python = 'python3'
 let g:pymode_rope = 1
 "let g:pymode_rope_autoimport=1
-"let g:pymode_rope_lookup_project = 1 
+let g:pymode_rope_lookup_project = 0 
 "let g:pymode_rope_goto_definition_bind = "<leader>g"
 let g:pymode_rope_goto_definition_bind = "<C-]>"
 let g:pymode_rope_goto_definition_cmd = 'e'
