@@ -15,8 +15,12 @@ set modeline
 set clipboard=unnamed   "Copy to system clipboard
 "Backspace in osX
 set backspace=indent,eol,start
-syntax on
-colorscheme iceberg
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+syntax enable
+colorscheme tender
 
 
 
@@ -65,6 +69,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/command-t'
 
 Plugin 'tmhedberg/SimpylFold'
+
+"Colors
+Plugin 'jacoborus/tender.vim'
+
 
 "CTAGS
 Plugin 'universal-ctags/ctags'
@@ -234,7 +242,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='lucius'
+let g:airline_theme = 'tender'
 let g:lightline = {
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
