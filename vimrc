@@ -57,11 +57,14 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/command-t'
+
+Plugin 'tmhedberg/SimpylFold'
 
 "CTAGS
 Plugin 'universal-ctags/ctags'
@@ -83,7 +86,8 @@ Plugin 'python-mode/python-mode'
 Plugin 'Shougo/neocomplete.vim'
 
 "Python virtualenv
-Plugin 'jmcantrell/vim-virtualenv' 
+Plugin 'plytophogy/vim-virtualenv'
+Plugin 'PieterjanMontens/vim-pipenv'
 
 "CtrlP 
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -120,6 +124,10 @@ let g:pymode_rope = 1
 let g:pymode_rope_goto_definition_bind = "<C-]>"
 let g:pymode_rope_goto_definition_cmd = 'e'
 let g:pymode_doc_bind = "<C-S-d>"
+
+"SimplyFold
+let g:SimpylFold_docstring_preview = 1
+
 
 "https://github.com/python-mode/python-mode/issues/384
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
@@ -226,7 +234,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='iceberg'
+let g:airline_theme='lucius'
 let g:lightline = {
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
