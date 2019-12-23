@@ -20,7 +20,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme tender
+colorscheme iceberg 
 
 
 
@@ -88,7 +88,6 @@ Plugin 'craigemery/vim-autotag'
 "Python
 Plugin 'python-mode/python-mode'
 
-"Rust
 
 "Completition
 Plugin 'Shougo/neocomplete.vim'
@@ -109,6 +108,13 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 "Js
 Plugin 'maksimr/vim-jsbeautify'
 
+"React
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'prettier/vim-prettier'
+
+"Ts
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -135,6 +141,9 @@ let g:pymode_doc_bind = "<C-S-d>"
 
 "SimplyFold
 let g:SimpylFold_docstring_preview = 1
+
+"Ts
+let g:typescript_indent_disable = 1
 
 
 "https://github.com/python-mode/python-mode/issues/384
@@ -315,6 +324,9 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+"Prettier
+nmap <Leader>py <Plug>(Prettier)
 
 "VimDiff
 map <leader>1 :diffg LO<CR>
